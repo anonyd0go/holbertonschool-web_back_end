@@ -1,7 +1,8 @@
 export default function appendToEachArrayValue(array, appendString) {
-    for (const ele of array) {
-      array[array.indexOf(ele)] = appendString + ele;
-    }
-  
-    return array;
+  const modArray = array;
+  for (const ele of array) {
+    modArray[array.indexOf(ele)] = appendString + ele;
   }
+
+  return modArray;
+}
