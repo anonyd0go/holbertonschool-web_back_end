@@ -8,6 +8,6 @@ export default function taskBlock(trueOrFalse) {
     const task2 = false;
     /* eslint-enable */
   }
-  
-    return [task, task2];
-  }
+
+  return [task, task2];
+}
