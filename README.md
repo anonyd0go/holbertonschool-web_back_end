@@ -9,3 +9,6 @@ In this directory we will go over creating classes in JavaScript with the ES6 ad
 
 ## [ES6 data manipulation](/ES6_data_manipulation/)
 In this directory we will explore several JS data structures.  We will practice using them and manipulating their data.  Among the objectives will be diferenctiating between `Array` and `Typed array`,  how to map, filter, and reduce arrays, and finally, what are Sets, Maps, and WeakMaps.
+
+## [ES6 Promises](/ES6_promise/)
+This directory will focus on JS use of Promises: What they are, why we use them and how they are used.  We will understand how to use the methods of the Promis object (and promis-like objects), trying and throwing errors, using the await operator, and using async functions.
