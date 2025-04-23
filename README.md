@@ -12,3 +12,6 @@ In this directory we will explore several JS data structures.  We will practice 
 
 ## [ES6 Promises](/ES6_promise/)
 This directory will focus on JS use of Promises: What they are, why we use them and how they are used.  We will understand how to use the methods of the Promis object (and promis-like objects), trying and throwing errors, using the await operator, and using async functions.
+
+## [Python - Variable Annotations](/python_variable_annotations/)
+This direcotory serves as an in depth exploration of Python's type annotation, function signatures, and duck typing.
