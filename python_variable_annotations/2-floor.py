@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-This module provides a function to compute the floor of a floating-point number.
+This module provides a function to compute the floor of a float number.
 
 Functions:
     floor(n: float) -> int:
