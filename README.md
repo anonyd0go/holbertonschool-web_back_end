@@ -15,3 +15,7 @@ This directory will focus on JS use of Promises: What they are, why we use them 
 
 ## [Python - Variable Annotations](/python_variable_annotations/)
 This direcotory serves as an in depth exploration of Python's type annotation, function signatures, and duck typing.
+
+## [Python - Async](/python_async_function/)
+This module serves as an introduction to asynchronous Programming in Python.
+Using the `asyncio` and `random` modules we will explore how to execute async programs and run concurrent coroutines.
