@@ -14,7 +14,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     Args:
         n (int): Number of times to spawn wait_random
         max_delay (int): Maximum delay in seconds
-  
+
     Returns:
         List[float]: List of all the delays in ascending order
     """
