@@ -19,3 +19,6 @@ This direcotory serves as an in depth exploration of Python's type annotation, f
 ## [Python - Async](/python_async_function/)
 This module serves as an introduction to asynchronous Programming in Python.
 Using the `asyncio` and `random` modules we will explore how to execute async programs and run concurrent coroutines.
+
+## [Python - Async Comprehension](/python_async_comprehension/)
+In this directory we explore Python's `async` functions even further.  In this case we will work with asynchronous generators, using async comprehension and how to type-annotate these generators.
