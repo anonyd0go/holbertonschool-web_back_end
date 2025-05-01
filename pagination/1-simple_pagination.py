@@ -30,16 +30,22 @@ class Server:
 
         Args:
             page (int): The current page number. Must be a positive integer.
-            page_size (int): The num of items per page. Must be a positive int.
+            page_size (int): The num of items per page. Must be positive.
 
         Returns:
             List[List]: A list of rows corresponding to the requested page.
+                        Returns an empty list if out of range.
 
         Raises:
             AssertionError: If `page` or `page_size` are not positive integers.
         """
         assert type(page) is int and page > 0
         assert type(page_size) is int and page_size > 0
-        data = Server.dataset(self)
-        pp = index_range(page, page_size)
-        return data[pp[0]:pp[1]]
+
+        data = self.dataset()
+        start_index, end_index = index_range(page, page_size)
+
+        if start_index >= len(data):
+            return []
+
+        return data[start_index:end_index]
