@@ -22,3 +22,6 @@ Using the `asyncio` and `random` modules we will explore how to execute async pr
 
 ## [Python - Async Comprehension](/python_async_comprehension/)
 In this directory we explore Python's `async` functions even further.  In this case we will work with asynchronous generators, using async comprehension and how to type-annotate these generators.
+
+## [Pagination](/pagination/)
+This directory explores the concept of pagination.  When accsesing databases for our aplication it is important to limit the amount of data that is shown to the clieant with a given query.  For this we paginate the data in order to make both the user's experience more plesant and the server side requirements/overhead mor efficient.
