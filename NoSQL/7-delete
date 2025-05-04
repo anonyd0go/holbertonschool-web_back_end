@@ -1,2 +1,2 @@
 // Delete multiple docs with a specific attribute
-debugger.school.deleteMany({name: "Holberton school"})
+db.school.deleteMany({name: "Holberton school"})
