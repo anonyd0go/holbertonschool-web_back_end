@@ -10,9 +10,7 @@ def log_stats():
     Connect to MongoDB and display stats about Nginx logs
     """
     client = MongoClient('mongodb://127.0.0.1:27017')
-
     db = client.logs
-
     collection = db.nginx
 
     total_logs = collection.count_documents({})
