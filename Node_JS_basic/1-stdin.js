@@ -5,7 +5,7 @@ process.stdin.setEncoding('utf8');
 process.stdin.on('readable', () => {
   const inpt = process.stdin.read();
   if (inpt !== null) {
-    process.stdout.write(`Your name is : ${inpt}`);
+    process.stdout.write(`Your name is: ${inpt}`);
   }
 });
 
