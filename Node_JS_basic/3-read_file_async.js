@@ -7,7 +7,7 @@ async function countStudents(filePath) {
       const data = fs.readFileSync(filePath, 'utf8'); // Read file
       // Split file into lines
       const lines = data.split('\n').filter((line) => line.trim() !== '');
-  
+
       // If only headers, exit
       if (lines.length <= 1) {
         console.log('Number of students: 0');
@@ -22,23 +22,23 @@ async function countStudents(filePath) {
       const fnIndex = headers.indexOf('firstname');
       const students = [];
       const fields = {};
-  
+
       studentLines.forEach((row) => {
         // Split values in each row
         const values = row.split(',');
         // Add student to student list
         students.push(values[fnIndex].trim());
-  
+
         // Add field if not exist and group student
         if (!fields[values[fieldIndex]]) {
           fields[values[fieldIndex]] = [];
         }
         fields[values[fieldIndex]].push(values[fnIndex].trim());
       });
-  
+
       // List number of students
       console.log(`Number of students: ${students.length}`);
-  
+
       for (const field in fields) {
         if (field in fields) {
           console.log(
