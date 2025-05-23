@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', async (req, res) => {
-  const response = [];
+  const response = ['This is the list of our students'];
   try {
     response.push(...(await countStudents(args[0])));
     if (response.length > 2){
