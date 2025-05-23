@@ -1,7 +1,7 @@
 const http = require('http');
 const countStudents = require('./3-read_file_async');
-const args = process.argv.slice(2);
 
+const args = process.argv.slice(2);
 const hostname = '127.0.0.1';
 const port = 1245;
 
@@ -22,7 +22,7 @@ const app = http.createServer(async (req, res) => {
       res.end(err.message);
     }
   } else {
-    res,statusCode = 404;
+    res.statusCode = 404;
     res.end();
   }
 });
@@ -30,6 +30,6 @@ const app = http.createServer(async (req, res) => {
 // Set app to listen
 app.listen(port, hostname, () => {
   console.log(`Server running at ${hostname}:${port}`);
-})
+});
 
 module.exports = app;
