@@ -7,11 +7,16 @@ async function countStudents(filePath) {
       const data = fs.readFileSync(filePath, 'utf8'); // Read file
       // Split file into lines
       const lines = data.split('\n').filter((line) => line.trim() !== '');
+      // Set up response
+      const response = [];
+      let message;
 
       // If only headers, exit
       if (lines.length <= 1) {
-        console.log('Number of students: 0');
-        resolve();
+        message = 'Number of students: 0';
+        response.push(message);
+        console.log(message);
+        resolve(response);
         return;
       }
       // Get csv headers, get student lines, create data containers
@@ -37,16 +42,18 @@ async function countStudents(filePath) {
       });
 
       // List number of students
-      console.log(`Number of students: ${students.length}`);
+      message = `Number of students: ${students.length}`;
+      response.push(message);
+      console.log(message);
 
       for (const field in fields) {
         if (field in fields) {
-          console.log(
-            `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`,
-          );
+          message = `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`;
+          response.push(message);
+          console.log(message);
         }
       }
-      resolve(); // Resolve Promise as complete
+      resolve(response); // Resolve Promise as complete
     } catch (error) {
       reject(new Error('Cannot load the database'));
     }
