@@ -2,7 +2,7 @@
 const http = require('http');
 
 // Setup for host and port
-const hostname = 'localhost';
+const hostname = '127.0.0.1';
 const port = 1245;
 
 // Create Server
@@ -15,3 +15,5 @@ const app = http.createServer((req, res) => {
 });
 
 app.listen(port, hostname);
+
+module.exports = app;
