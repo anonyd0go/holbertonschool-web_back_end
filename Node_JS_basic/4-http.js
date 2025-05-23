@@ -14,6 +14,7 @@ const app = http.createServer((req, res) => {
   res.end('Hello Holberton School!');
 });
 
+// Open port to listen to
 app.listen(port, hostname);
 
 module.exports = app;
