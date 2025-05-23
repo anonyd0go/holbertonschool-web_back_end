@@ -13,7 +13,7 @@ app.get('/students', async (req, res) => {
   const response = [];
   try {
     response.push(...(await countStudents(args[0])));
-    if (response.length > 1){
+    if (response.length > 2){
       response.splice(0, 0, 'This is the list of our students');
       res.send(`${response.join('\n')}`);
     } else {
