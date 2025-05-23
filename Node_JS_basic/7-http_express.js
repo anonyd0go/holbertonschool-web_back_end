@@ -10,17 +10,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', async (req, res) => {
-  const response = ['This is the list of our students'];
+  const msg = 'This is the list of our students\n';
   try {
-    response.push(...(await countStudents(args[0])));
-    if (response.length > 2){
-      response.splice(0, 0, 'This is the list of our students');
-      res.send(`${response.join('\n')}`);
-    } else {
-      res.send(`${response.join('\n')}`);
-    }
+    const response = await countStudents(args[0]);
+    res.send(`${msg}${response.join('\n')}`);
   } catch (err) {
-    res.send(err.message);
+    res.send(`${msg}${err.message}`);
   }
 });
 
