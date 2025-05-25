@@ -12,7 +12,7 @@ function readDatabase(filePath) {
 
       // If only headers, exit
       if (lines.length <= 1) {
-        message = 'Number of students: 0';
+        message = 'DB Accessed. Number of students: 0';
         console.log(message);
         resolve({});
         return;
@@ -37,7 +37,7 @@ function readDatabase(filePath) {
 
       for (const field in fields) {
         if (field in fields) {
-          message = `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`;
+          message = `DB accessed for ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`;
           console.log(message);
         }
       }
