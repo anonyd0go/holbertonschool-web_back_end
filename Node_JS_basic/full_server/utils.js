@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function readDatabase(path) {
+function readDatabase(filePath) {
   // Return a Promise
   return new Promise((resolve, reject) => {
     try {
