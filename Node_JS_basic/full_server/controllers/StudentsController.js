@@ -11,8 +11,7 @@ class StudentsController {
 
       // Iterate ofer dictionary to create output
       for (const field of Object.keys(fields)) {
-        msg = `Number of students in ${field}: ${fields[field].length}.
-          List: ${fields[field].join(', ')}`;
+        msg = `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`;
 
         response.push(msg);
       }
