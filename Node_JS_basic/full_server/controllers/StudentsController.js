@@ -16,10 +16,10 @@ class StudentsController {
         response.push(msg);
       }
 
-      res.send(200, `${response.join('\n')}`);
+      res.status(200).send(`${response.join('\n')}`);
     }).catch(() => {
       // Send error response if unable to load DB
-      res.send(500, 'Cannot load the database');
+      res.status(500).send('Cannot load the database');
     });
   }
 
@@ -32,12 +32,12 @@ class StudentsController {
       readDatabase(db).then((fields) => {
         const stdntByMajor = fields[major];
 
-        res.send(200, `List: ${stdntByMajor.join(', ')}`);
+        res.status(200).send(`List: ${stdntByMajor.join(', ')}`);
       }).catch(() => {
-        res.send(500, 'Cannot load the database');
+        res.status(500).send('Cannot load the database');
       });
     } else {
-      res.send(500, 'Major parameter must be CS or SWE');
+      res.status(500).send('Major parameter must be CS or SWE');
     }
   }
 }
